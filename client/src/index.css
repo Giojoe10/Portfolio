@@ -1,10 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 h1 {
-    font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: #1e1e22;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #73f19038;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #73f19060;
+}
+
+i{
+  cursor: pointer;
+}
+
+i:hover{
+  color: #2ba5ff;
+  font-size: 35px;
 }

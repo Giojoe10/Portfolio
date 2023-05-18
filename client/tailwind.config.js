@@ -6,13 +6,13 @@ module.exports = {
       colors: {
         primary: "#1e1e22",
         secondary: "#73f190",
-        tertiary: "#2b5aff",
+        tertiary: "#2ba5ff",
       },
     },
     screens: {
       lg: { max: "2047px" },
 
-      sm: { max: "639px" },
+      sm: { max: "1023px" },
     },
   },
   plugins: [],

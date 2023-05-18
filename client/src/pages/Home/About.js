@@ -16,9 +16,8 @@ function About() {
   return (
     <div>
       <SectionTitle title="Sobre mim" />
-
-      <div className="flex w-full items-center">
-        <div className="h-[70vh] w-1/2">
+      <div className="flex w-full items-center sm:flex-col">
+        <div className="h-[70vh] w-1/2 sm:w-full">
           <lottie-player
             src="https://assets10.lottiefiles.com/packages/lf20_xu3jsjrn.json"
             background="transparent"
