@@ -106,3 +106,7 @@ textarea:focus {
   outline: none;
   border: 2px solid #0e5b92;
 }
+
+.ant-modal-wrap{
+  z-index: 9999 !important;
+}
