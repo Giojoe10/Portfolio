@@ -1,25 +1,18 @@
 import React from "react";
 import SectionTitle from "../../components/SectionTitle";
+import { useSelector } from "react-redux";
 
 function About() {
-  const skills = [
-    "Javascript",
-    "MERN",
-    "Python",
-    "Django",
-    "Rust",
-    "C#",
-    "Java",
-    "Flutter + Dart",
-    "Machine Learning",
-  ];
+  const { portfolioData } = useSelector((state) => state.root);
+  const { about } = portfolioData;
+  const { lottieURL, description1, description2, skills } = about;
   return (
     <div>
       <SectionTitle title="Sobre mim" />
       <div className="flex w-full items-center sm:flex-col">
         <div className="h-[70vh] w-1/2 sm:w-full">
           <lottie-player
-            src="https://assets10.lottiefiles.com/packages/lf20_xu3jsjrn.json"
+            src={lottieURL || ""}
             background="transparent"
             speed="1"
             loop
@@ -27,22 +20,8 @@ function About() {
           ></lottie-player>
         </div>
         <div className="flex flex-col gap-5 w-1/2">
-          <p className="text-white">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-            elementum aliquet tincidunt. Cras dignissim dui placerat,
-            consectetur arcu consequat, finibus dolor. Donec sed lacus eget nibh
-            dignissim laoreet ut eget augue. Curabitur non ligula nisi. Sed
-            tristique convallis nisl, eu dictum lectus malesuada in. Nunc
-            suscipit mi posuere purus imperdiet.
-          </p>
-          <p className="text-white">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-            elementum aliquet tincidunt. Cras dignissim dui placerat,
-            consectetur arcu consequat, finibus dolor. Donec sed lacus eget nibh
-            dignissim laoreet ut eget augue. Curabitur non ligula nisi. Sed
-            tristique convallis nisl, eu dictum lectus malesuada in. Nunc
-            suscipit mi posuere purus imperdiet.
-          </p>
+          <p className="text-white">{description1 || ""}</p>
+          <p className="text-white">{description2 || ""}</p>
         </div>
       </div>
       <div className="py-5">

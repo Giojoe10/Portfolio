@@ -29,7 +29,6 @@ export const projects =
   },
   {
     technologies: [],
-
     title: "SHEYCARS",
     image: "https://sheysathya2.netlify.app/cars.svg",
     description:
