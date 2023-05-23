@@ -11,24 +11,25 @@ import LeftSider from "./LeftSider";
 import { useSelector } from "react-redux";
 
 function Home() {
-  const { portfolioData } = useSelector((state) => state.root);
-  return (
-    <div>
-      <Header />
-      {portfolioData && (
-        <div className="bg-primary px-40 sm:px-10">
-          <Intro />
-          <About />
-          <Experiences />
-          <Projects />
-          <Courses />
-          <Contact />
-          <Footer />
-          <LeftSider />
+    const { portfolioData } = useSelector((state) => state.root);
+
+    return (
+        <div>
+            <Header />
+            {portfolioData && (
+                <div className="bg-primary px-40 sm:px-10">
+                    <Intro />
+                    <About />
+                    <Experiences />
+                    <Projects />
+                    <Courses />
+                    <Contact />
+                    <Footer />
+                    <LeftSider />
+                </div>
+            )}
         </div>
-      )}
-    </div>
-  );
+    );
 }
 
 export default Home;
