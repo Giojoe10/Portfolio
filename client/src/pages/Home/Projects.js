@@ -19,7 +19,7 @@ function Projects() {
               <h1
                 className={`text-xl px-5 py-3 ${
                   selecteditemIndex === index
-                    ? "text-tertiary border-tertiary border-l-4 -ml-[3px] bg-[#0d397c3d] sm:w-40"
+                    ? "text-tertiary border-tertiary border-l-4 -ml-[3px] bg-[#0d397c3d]"
                     : "text-white"
                 }`}
               >
@@ -28,7 +28,7 @@ function Projects() {
             </div>
           ))}
         </div>
-        <div className="flex items-center justify-center gap-10 sm:flex-col">
+        <div className="flex items-center justify-center gap-10 sm:flex-col sm:border sm:border-gray-700 sm:p-5 sm:rounded-md">
         <img src={projects[selecteditemIndex].image} alt="" className="h-60 w-72"/>
           <div className="flex flex-col gap-5">
             <h1 className="text-secondary text-xl ">

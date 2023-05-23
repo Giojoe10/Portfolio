@@ -19,7 +19,7 @@ function Contact() {
                                         {key}:{" "}
                                     </span>
                                     <span className="text-white">
-                                        "{contacts[key]}",
+                                        "{key!=="age"?contacts[key]:new Date().getFullYear() - 2003 }",
                                     </span>
                                 </p>
                             )

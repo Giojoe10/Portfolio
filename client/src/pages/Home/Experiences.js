@@ -20,7 +20,7 @@ function Experiences() {
               <h1
                 className={`text-xl px-5 py-3 ${
                   selecteditemIndex === index
-                    ? "text-tertiary border-tertiary border-l-4 -ml-[3px] bg-[#0d397c3d] sm:w-40"
+                    ? "text-tertiary border-tertiary border-l-4 -ml-[3px] bg-[#0d397c3d]"
                     : "text-white"
                 }`}
               >
@@ -29,7 +29,7 @@ function Experiences() {
             </div>
           ))}
         </div>
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-5 sm:border sm:border-gray-700 sm:p-5 sm:rounded-md">
           <h1 className="text-secondary text-xl ">
             {experiences[selecteditemIndex].title}
           </h1>

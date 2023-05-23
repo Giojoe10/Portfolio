@@ -20,7 +20,7 @@ function Intro() {
           Comece aqui!
         </button>
       </div>
-      <div className="justify-center items-center">
+      <div className="justify-center items-center sm:absolute sm:w-48 sm:right-0 sm:top-2/4">
         <img
           src={require("../../resources/me.jpg")}
           alt="This is me!"
