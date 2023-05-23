@@ -44,7 +44,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/admin" element={<Admin />} />
-        <Route path="/admin-login" element={<Login />} />
+        <Route path="/auth/admin-login" element={<Login />} />
       </Routes>
     </BrowserRouter>
   );

@@ -15,7 +15,7 @@ function Login() {
         try {
             dispatch(ShowLoading());
             const response = await axios.post(
-                "/api/portfolio/admin-login",
+                "/auth/admin-login",
                 user
             );
             dispatch(HideLoading());
@@ -34,7 +34,7 @@ function Login() {
 
     return (
         <div className="flex justify-center items-center h-screen bg-primary">
-            <div className="w-96 flex flex-col gap-5 p-5 shadow     rounded-md bg-white">
+            <div className="w-96 flex flex-col gap-5 p-5 shadow rounded-md bg-white">
                 <h1 className="text-xl font-bold text-center">
                     Login de Administrador
                 </h1>
