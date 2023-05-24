@@ -22,14 +22,14 @@ function Admin() {
                 window.location.href = "/auth/admin-login";
             }
             const { data } = await axios.post(
-                "/auth/admin-login",
+                "/auth",
                 {},
                 { withCredentials: true }
               );
-            const { status, user } = data;
+            const { success, user } = data;
             console.log(data)
             setUsername(user);
-            return status
+            return success
                 ? message.success("Login successful!")
                 : (removeCookie("token"),
                   (window.location.href = "/auth/admin-login"));
