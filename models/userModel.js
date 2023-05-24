@@ -13,10 +13,8 @@ const userModel = new mongoose.Schema({
     },
 });
 
-userModel.pre("save", async () => {
+userModel.pre("save", async function () {
     this.password = await bcrypt.hash(this.password, 12);
-}
-)
-
+});
 
 module.exports = mongoose.model("users", userModel);

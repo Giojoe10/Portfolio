@@ -19,8 +19,8 @@ function Login() {
                 user
             );
             dispatch(HideLoading());
-            if (response.data.success) {
-                localStorage.setItem("token", JSON.stringify(response.data));
+            const {success, data} = response.data;
+            if (success) {
                 window.location.href = "/admin";
                 message.success(response.data.message);
             } else {

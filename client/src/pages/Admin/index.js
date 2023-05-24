@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../../components/Header";
-import { Tabs } from "antd";
+import { Tabs, message } from "antd";
 import AdminIntro from "./AdminIntro";
 import AdminAbout from "./AdminAbout";
 import { useSelector } from "react-redux";
@@ -8,14 +8,39 @@ import AdminExperiences from "./AdminExperiences";
 import AdminProjects from "./AdminProjects";
 import AdminCourses from "./AdminCourses";
 import AdminContact from "./AdminContact";
+import { useCookies } from "react-cookie";
+import axios from "axios";
 
 function Admin() {
-    useEffect(() => {
-        if (!localStorage.getItem("token")) {
-            window.location.href = "/admin-login";
-        }
-    }, []);
     const { portfolioData } = useSelector((state) => state.root);
+    const [cookies, removeCookie] = useCookies([]);
+    const [username, setUsername] = useState("");
+
+    useEffect(() => {
+        const verifyCookie = async () => {
+            if (!cookies.token) {
+                window.location.href = "/auth/admin-login";
+            }
+            const { data } = await axios.post(
+                "/auth/admin-login",
+                {},
+                { withCredentials: true }
+              );
+            const { status, user } = data;
+            console.log(data)
+            setUsername(user);
+            return status
+                ? message.success("Login successful!")
+                : (removeCookie("token"),
+                  (window.location.href = "/auth/admin-login"));
+        };
+        verifyCookie();
+    }, [cookies, removeCookie]);
+    const Logout = () => {
+        removeCookie("token");
+        window.location.href("/");
+    };
+
     const tabs = [
         {
             label: "Intro",
@@ -61,7 +86,7 @@ function Admin() {
                     className="undeline text-primary text-xl cursor-pointer"
                     onClick={() => {
                         localStorage.removeItem("token");
-                        window.location.href = "/admin-login";
+                        window.location.href = "/auth/admin-login";
                     }}
                 >
                     Logout
