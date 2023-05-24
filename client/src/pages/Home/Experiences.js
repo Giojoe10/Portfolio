@@ -21,7 +21,7 @@ function Experiences() {
                 className={`text-xl px-5 py-3 ${
                   selecteditemIndex === index
                     ? "text-tertiary border-tertiary border-l-4 -ml-[3px] bg-[#0d397c3d]"
-                    : "text-white"
+                    : "dark:text-white"
                 }`}
               >
                 {experience.period}
@@ -36,7 +36,7 @@ function Experiences() {
           <h1 className="text-tertiary text-xl ">
             {experiences[selecteditemIndex].company}
           </h1>
-          <p className="text-white text-xl ">
+          <p className="dark:text-white text-xl ">
             {experiences[selecteditemIndex].description}
           </p>
         </div>

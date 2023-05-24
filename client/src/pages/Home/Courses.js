@@ -20,7 +20,7 @@ function Courses() {
                 className={`text-xl px-5 py-3 ${
                   selecteditemIndex === index
                     ? "text-tertiary border-tertiary border-l-4 -ml-[3px] bg-[#0d397c3d]"
-                    : "text-white"
+                    : "dark:text-white"
                 }`}
               >
                 {course.title}
@@ -33,7 +33,7 @@ function Courses() {
             <h1 className="text-secondary text-xl ">
               {courses[selecteditemIndex].title}
             </h1>
-            <p className="text-white text-xl ">
+            <p className="dark:text-white text-xl ">
               {courses[selecteditemIndex].description}
             </p>
           </div>

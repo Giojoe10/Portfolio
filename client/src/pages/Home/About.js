@@ -16,8 +16,8 @@ function About() {
                     <Lottie animationData={animationData} loop={true} play={true} className="h-full w-full"/>
                 </div>
                 <div className="flex flex-col gap-5 w-1/2 sm:w-full">
-                    <p className="text-white">{description1 || ""}</p>
-                    <p className="text-white">{description2 || ""}</p>
+                    <p className="dark:text-white">{description1 || ""}</p>
+                    <p className="dark:text-white">{description2 || ""}</p>
                 </div>
             </div>
             <div className="py-5">
