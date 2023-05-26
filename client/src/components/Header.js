@@ -1,8 +1,6 @@
 import React, { useContext } from "react";
-import {darkToggle} from "../pages/Home/index"
 
 function Header() {
-const {dark, setDark} = useContext(darkToggle)
   return (
     <div className="p-5 bg-primary text-4xl font-semibold flex justify-between">
       <a href="/" className="flex">
@@ -16,7 +14,6 @@ const {dark, setDark} = useContext(darkToggle)
           id="toggle"
           className="toggle--checkbox"
           onClick={() => {
-            setDark(!dark);
           }}
         />
         <label for="toggle" className="toggle--label">

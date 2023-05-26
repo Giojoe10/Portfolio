@@ -14,7 +14,7 @@ import { useSelector } from "react-redux";
 function Home() {
   const { portfolioData } = useSelector((state) => state.root);
   return (
-    <div dark>
+    <div className="dark">
       {portfolioData && (
         <div>
           <Header />

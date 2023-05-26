@@ -19,6 +19,7 @@ module.exports.userVerification = async (req, res, next) => {
       const user = await users.findById(data.id);
       if (user) {
         return res.status(200).send({ success: true, user: user.username });
+        // next();
       } else {
         return res
           .status(401)
