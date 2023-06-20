@@ -21,13 +21,13 @@ function About() {
                 </div>
             </div>
             <div className="py-5">
-                <h1 className="text-tertiary text-xl">
+                <h1 className="text-tertiary dark:text-dark-tertiary text-xl">
                     Recentemente, tenho trabalhado com as tecnologias:
                 </h1>
                 <div className="flex flex-wrap gap-x-7 gap-y-5 mt-5">
                     {skills.map((skill, index) => (
-                        <div className="border border-tertiary py-3 px-7 rounded">
-                            <h1 className="text-tertiary">{skill}</h1>
+                        <div className="border border-tertiary dark:border-dark-tertiary py-3 px-7 rounded">
+                            <h1 className="text-tertiary dark:text-dark-tertiary">{skill}</h1>
                         </div>
                     ))}
                 </div>

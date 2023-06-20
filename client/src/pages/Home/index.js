@@ -18,7 +18,7 @@ function Home() {
       {portfolioData && (
         <div>
           <Header />
-          <div className="dark:bg-primary px-40 sm:px-10">
+          <div className="dark:bg-dark-primary bg-primary px-40 sm:px-10">
             <Intro />
             <About />
             <Experiences />

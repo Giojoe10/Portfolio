@@ -4,9 +4,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#1e1e22",
-        secondary: "#73f190",
-        tertiary: "#2ba5ff",
+        primary: "#ffffff",
+        secondary: "#2ba5ff",
+        tertiary: "#0B7503",
+        text: "#000000",
+
+        "dark-primary": "#1e1e22",
+        "dark-secondary": "#73f190",
+        "dark-tertiary": "#2ba5ff",
+        "dark-text": "#ffffff",
       },
     },
     screens: {
@@ -16,5 +22,5 @@ module.exports = {
     },
   },
   plugins: [],
-  darkMode:'class'
+  darkMode: "class",
 };

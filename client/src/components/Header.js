@@ -6,17 +6,19 @@ function Header() {
   const handleMode = () => setDarkMode(!darkMode)
 
   return (
-    <div className="p-5 bg-primary text-4xl font-semibold flex justify-between">
+    <div className="p-5 bg-dark-primary text-4xl font-semibold flex justify-between">
       <a href="/" className="flex">
-        <h1 className="text-secondary">G</h1>
+        <h1 className="text-dark-secondary">G</h1>
         <h1 className="text-white">M</h1>
-        <h1 className="text-tertiary">B</h1>
+        <h1 className="text-dark-tertiary">B</h1>
       </a>
       <div>
+        {/* TODO: Change this icon to something simpler */}
         <input
           type="checkbox"
           id="toggle"
           className="toggle--checkbox"
+          checked={darkMode}
           onClick={() => {
           }}
         />

@@ -15,7 +15,7 @@ function LeftSider() {
             <i class="ri-github-fill text-gray-500 text-2xl"></i>
           </a>
         </div>
-        <div className="w-[1px] h-24 bg-[#5f5f5f9d] sm:hidden"></div>
+        <div className="w-[1px] h-[120px] bg-[#5f5f5f9d] sm:hidden"></div>
       </div>
     </div>
   );

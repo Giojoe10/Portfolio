@@ -3,7 +3,7 @@ import Header from "../../components/Header";
 
 function NotFound() {
     return (
-        <div className="dark h-screen bg-primary">
+        <div className="h-screen bg-primary dark:bg-dark-primary">
             <Header />
             <div className="flex justify-center items-center h-3/4">
                 <div className="px-40 sm:px-10 flex flex-col justify-center items-center gap-10">

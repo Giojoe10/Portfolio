@@ -9,6 +9,10 @@ h1 {
   font-family: "Montserrat", sans-serif;
 }
 
+* {
+  font-family: "Fira Sans", sans-serif;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 8px;
@@ -16,7 +20,7 @@ h1 {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background-color: #1e1e22;
+  background-color: #2e2e36;
 }
 
 /* Handle */
@@ -142,7 +146,7 @@ textarea:focus {
 
 @keyframes reverse {
   0% {
-    left:42px;
+    left: 42px;
     width: 30px;
   }
   60% {
@@ -170,10 +174,9 @@ textarea:focus {
   background: #fffaa8;
 }
 
-
-.toggle--label-background{
-  width:15px;
-  height:5px;
+.toggle--label-background {
+  width: 15px;
+  height: 5px;
   border-radius: 5px;
   position: relative;
   background: white;
@@ -182,7 +185,7 @@ textarea:focus {
   transition: all 150ms ease-in;
 }
 .toggle--label-background::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -4px;
   width: 10px;
@@ -193,7 +196,7 @@ textarea:focus {
   transition: all 150ms ease-in;
 }
 .toggle--label-background::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 5px;
   width: 18px;
@@ -204,12 +207,12 @@ textarea:focus {
   transition: all 150ms ease-in;
 }
 
-.toggle--checkbox:checked + .toggle--label{
+.toggle--checkbox:checked + .toggle--label {
   background: #6b7abb;
   border-color: #5d6baa;
 }
 
-.toggle--checkbox:checked + .toggle--label::before{
+.toggle--checkbox:checked + .toggle--label::before {
   background: white;
   border-color: #e8e8ea;
   animation: switch;
@@ -217,11 +220,11 @@ textarea:focus {
   animation-fill-mode: forwards;
 }
 
-.toggle--label::after{
+.toggle--label::after {
   transition-delay: 0ms;
   transition: all 0ms ease-in;
   position: absolute;
-  content: '';
+  content: "";
   box-shadow: #e8e8ea -13px 0 0 2px, #e8e8ea -20px 6px 0 -0.5px;
   left: 66px;
   top: 8px;
@@ -238,18 +241,18 @@ textarea:focus {
   opacity: 1;
 }
 
-.toggle--checkbox:checked + .toggle--label .toggle--label-background{
-  left:25px;
+.toggle--checkbox:checked + .toggle--label .toggle--label-background {
+  left: 25px;
   width: 4px;
   height: 4px;
-  top:17px;
+  top: 17px;
 }
-.toggle--checkbox:checked + .toggle--label .toggle--label-background::before{
+.toggle--checkbox:checked + .toggle--label .toggle--label-background::before {
   width: 4px;
   height: 4px;
   top: -8px;
 }
-.toggle--checkbox:checked + .toggle--label .toggle--label-background::after{
+.toggle--checkbox:checked + .toggle--label .toggle--label-background::after {
   width: 4px;
   height: 4px;
   left: -10px;
