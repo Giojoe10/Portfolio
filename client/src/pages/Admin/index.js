@@ -75,11 +75,11 @@ function Admin() {
     ];
 
     return (
-        <div>
+        <div className="bg-primary dark:bg-dark-primary h-screen">
             <Header />
-            <div className="flex gap-10 items-center px-5 pt-2 justify-between">
+            <div className="flex gap-10 items-center px-5 pt-2 justify-between bg-primary dark:bg-dark-primary">
                 <div className="flex items-center gap-10">
-                    <h1 className="text-3xl text-primary">Admin Panel</h1>
+                    <h1 className="text-3xl dark:text-white">Admin Panel</h1>
                     <div className="w-60 h-[1px] bg-gray-500"></div>
                 </div>
                 <h1
@@ -99,6 +99,7 @@ function Admin() {
                         defaultActiveKey="1"
                         tabPosition="left"
                         items={tabs}
+                        className="dark:text-white"
                     ></Tabs>
                 </div>
             )}

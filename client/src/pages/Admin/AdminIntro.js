@@ -34,7 +34,7 @@ function AdminIntro() {
         layout="vertical"
         initialValues={portfolioData.intro}
       >
-        <Form.Item name="welcomeText" label="Welcome Text">
+        <Form.Item name="welcomeText" label={<label className="dark:text-white">Welcome Text</label>}>
           <input placeholder="Welcome Text" />
         </Form.Item>
         <Form.Item name="firstName" label="First Name">
